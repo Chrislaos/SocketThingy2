@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="SocketThingy.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SocketThingy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="Grid" RenderTransformOrigin="0.5,0.5">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <CompositeTransform CenterY="0.5" CenterX="0.5"/>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF14446B" Offset="0.87"/>
+                <GradientStop Color="#FFA66712" Offset="0.743"/>
+                <GradientStop Color="#FF14446B" Offset="0.008"/>
+            </LinearGradientBrush>
+            
+        </Grid.Background>
+        <TextBlock x:Name="recievedTextBox" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="170" Width="564" FontSize="16" Grid.ColumnSpan="2"/>
+        <Button x:Name="Read" Content="Read" HorizontalAlignment="Left" Margin="118.701,185,0,0" VerticalAlignment="Top" Height="51" Width="189" Click="Read_Click" Grid.Column="1"/>
+        <Button x:Name="Connect1" Content="Connect" HorizontalAlignment="Left" Margin="0,185,0,0" VerticalAlignment="Top" Height="51" Width="229" Click="Connect1_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="ExitButton" Content="EXIT" Grid.Column="1" HorizontalAlignment="Left" Margin="1161,10,0,0" VerticalAlignment="Top" Click="ExitButton_Click"/>
+        <Button x:Name="loltest" Content="loltest" Grid.Column="1" HorizontalAlignment="Left" Margin="464,10,0,0" VerticalAlignment="Top" Height="38" Width="164" Click="loltest_Click"/>
+        <ListView x:Name="ListView1" Grid.Column="1" HorizontalAlignment="Left" Height="630" Margin="672,80,0,0" VerticalAlignment="Top" Width="600" Background="#FFBBABAB" BorderBrush="#FF080303" BorderThickness="10">
+            <ListView.Header>
+                <StackPanel Background="Red" Width="150" Height="25">
+                    <TextBlock Text="ListView header"/>
+                </StackPanel>
+            </ListView.Header>
+        </ListView>
+        <Button x:Name="MoveToListBox1" Content="MoveToList" HorizontalAlignment="Left" Margin="321,385,0,0" VerticalAlignment="Top" Click="MoveToList_click"/>
+        <TextBox x:Name="MoveToListBox" HorizontalAlignment="Left" Margin="50,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271"/>
+        
+    </Grid>
+    
+</Page>
