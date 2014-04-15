@@ -26,13 +26,36 @@
         <Button x:Name="Connect1" Content="Connect" HorizontalAlignment="Left" Margin="0,185,0,0" VerticalAlignment="Top" Height="51" Width="229" Click="Connect1_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="ExitButton" Content="EXIT" Grid.Column="1" HorizontalAlignment="Left" Margin="1161,10,0,0" VerticalAlignment="Top" Click="ExitButton_Click"/>
         <Button x:Name="loltest" Content="loltest" Grid.Column="1" HorizontalAlignment="Left" Margin="464,10,0,0" VerticalAlignment="Top" Height="38" Width="164" Click="loltest_Click"/>
-        <ListView x:Name="ListView1" Grid.Column="1" HorizontalAlignment="Left" Height="630" Margin="672,80,0,0" VerticalAlignment="Top" Width="600" Background="#FFBBABAB" BorderBrush="#FF080303" BorderThickness="10">
-            <ListView.Header>
-                <StackPanel Background="Red" Width="150" Height="25">
-                    <TextBlock Text="ListView header"/>
-                </StackPanel>
-            </ListView.Header>
-        </ListView>
+        <ScrollViewer Grid.Column="1" HorizontalAlignment="Left" Height="630" Margin="672,80,0,0" VerticalAlignment="Top" Width="600" >
+            <ListView x:Name="ListView1" Background="#FFBBABAB" BorderBrush="#FF080303" BorderThickness="10" Height="630" Width="600">
+                <ListViewHeaderItem Height="200" Background="Beige" Width="200" Visibility="Visible" >
+                    <TextBlock Text="Kake">
+                    </TextBlock>
+                </ListViewHeaderItem>
+                <ListView.Header>
+                    <StackPanel Background="Red" Width="580" Height="20" >
+                        <TextBlock Text="ListView header" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Header2" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="600">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Name}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Description}"/>
+                            <TextBlock Grid.Column="2" Text="{Binding Settings}"/>
+                            <TextBlock Grid.Column="3" Text="{Binding Status}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
         <Button x:Name="MoveToListBox1" Content="MoveToList" HorizontalAlignment="Left" Margin="321,385,0,0" VerticalAlignment="Top" Click="MoveToList_click"/>
         <TextBox x:Name="MoveToListBox" HorizontalAlignment="Left" Margin="50,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271"/>
         
