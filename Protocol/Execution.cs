@@ -54,5 +54,19 @@ namespace Demo.Protocol
                 OnPropertyChanged("State");
             }
         }
+        private String _description = null;
+        public String Description
+        {
+            get
+            {
+                return _description;
+            }
+            set
+            {
+                _description = value;
+                OnPropertyChanged("Description");
+            }
+        }
+
     }
 }

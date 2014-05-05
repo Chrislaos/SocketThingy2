@@ -13,7 +13,8 @@ namespace Demo.Protocol
         StartExecution = 1502,
         StopExecution = 1503,
         PauseExecution = 1504,
-        ResumeExecution = 1505
+        ResumeExecution = 1505,
+        SendAllProcedures = 1601
     }
 
     public enum EventMessageID
@@ -25,6 +26,7 @@ namespace Demo.Protocol
         ExecutionResumed = 1305,
         TestPassed = 1306,
         TestFailed = 1307,
-        ExecutionChanged = 1308
+        ExecutionChanged = 1308,
+        ProceduresSent = 1701
     };
 }

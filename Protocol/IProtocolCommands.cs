@@ -21,6 +21,7 @@ namespace Demo.Protocol
         void ResumeExecution(String seqfile);
         void PauseExecution(String seqfile);
         void StopExecution(String seqfile);
+        void SendAllProcedures();
 
     }
 
